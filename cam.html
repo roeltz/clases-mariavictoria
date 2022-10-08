@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<canvas id="camara" width="640" height="360"></canvas>
+	<video id="video" autoplay></video>
+	<button>Capturar</button>
+	<script>
+		async function main() {
+			let canvas = document.querySelector("#camara");
+			let context = canvas.getContext("2d");
+			let video = document.querySelector("#video");
+			let CW = canvas.width;
+			let HCW = canvas.width / 2;
+			let CH = canvas.height;
+			let HCH = canvas.height / 2;
+
+			let stream = await navigator.mediaDevices.getUserMedia({
+				video: true
+			});
+
+			video.srcObject = stream;
+
+			let a = 0;
+
+			function draw() {
+				context.resetTransform();
+				context.filter = "grayscale(1)";
+				context.clearRect(0, 0, CW, CH);
+				context.translate(HCW, HCH);
+				context.rotate(a * Math.PI / 180);
+				context.drawImage(video, -HCW, -HCH, canvas.width, canvas.height);
+				a += 0.1;
+				requestAnimationFrame(draw);
+			}
+
+			draw();
+
+			//document.querySelector("button").addEventListener("click", draw);
+		}
+
+		main();
+	</script>
+</body>
+</html>

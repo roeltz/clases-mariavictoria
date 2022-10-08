@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style>
+		div, section {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+
+		section {
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div></div>
+		<section></section>
+	</main>
+	<script>
+		function Draggable(el) {
+			let startCursorPosition;
+			let startElementPosition;
+			let mousedownHandler;
+			let mousemoveHandler;
+
+			this.start = function() {
+				el.addEventListener("mousedown", mousedownHandler = ev => {
+					let mouseupHandler;
+
+					startCursorPosition = {
+						x: ev.clientX,
+						y: ev.clientY
+					};
+					startElementPosition = {
+						x: el.offsetLeft,
+						y: el.offsetTop
+					};
+
+					window.addEventListener("mousemove", mousemoveHandler = ev => {
+						let x = ev.clientX - startCursorPosition.x + startElementPosition.x;
+						let y = ev.clientY - startCursorPosition.y + startElementPosition.y;
+
+						el.style.left = `${x}px`;
+						el.style.top = `${y}px`;
+					});
+
+					el.addEventListener("mouseup", mouseupHandler = ev => {
+						window.removeEventListener("mousemove", mousemoveHandler);
+						window.removeEventListener("mouseup", mouseupHandler);
+					});
+				});
+			};
+
+			this.stop = function() {
+				if (mousedownHandler) {
+					el.removeEventListener("mousedown", mousedownHandler);
+					window.removeEventListener("mousemove", mousemoveHandler);
+				}
+			};
+
+			this.start();
+		}
+
+		function main() {
+			let div = document.querySelector("div");
+			let section = document.querySelector("section");
+
+			let a = new Draggable(div);
+			let b = new Draggable(section);
+
+			setTimeout(() => a.stop(), 5000);
+			setTimeout(() => a.start(), 10000);
+		}
+
+		main();
+	</script>
+</body>
+</html>
