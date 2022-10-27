@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+	<main>
+		<canvas width="200" height="200"></canvas>
+		<button>Save</button>
+	</main>
+	<script>
+		let canvas = document.querySelector("canvas");
+		let button = document.querySelector("button");
+
+		button.addEventListener("click", save);
+
+		function save() {
+			let data = canvas.toDataURL("image/png");
+			let link = document.createElement("a");
+
+			link.href = data;
+			link.download = prompt("Nombre", "imagen.png");
+
+			document.body.appendChild(link);
+			link.click();
+		}
+	</script>
+</body>
+</html>
