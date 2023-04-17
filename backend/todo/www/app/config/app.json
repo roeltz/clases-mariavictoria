@@ -1,0 +1,22 @@
+{
+	"data": {
+		"sources": {
+			"default": {
+				"db": "todo",
+				"host": "localhost",
+				"user": "root",
+				"password": "Over9000!!!",
+				"options": {}
+			}
+		},
+		"logger": {
+			"level": "100",
+			"path#file": "../log/data.log"
+		}
+	},
+	"http": {
+		"base-url": "/clases-mariavictoria/backend/todo/www/",
+		"views-dir#path": "../src/views/",
+		"logger": true
+	}
+}

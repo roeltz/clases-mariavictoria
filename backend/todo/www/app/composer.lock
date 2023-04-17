@@ -1,0 +1,367 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "504e4ad8c28b2ee7616202b27cee4d99",
+    "packages": [
+        {
+            "name": "monolog/monolog",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "25a97abf904120a386c546be11c3b58f1f9e6f37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/25a97abf904120a386c546be11c3b58f1f9e6f37",
+                "reference": "25a97abf904120a386c546be11c3b58f1f9e6f37",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "doctrine/couchdb": "dev-master",
+                "mlehner/gelf-php": "1.0.*",
+                "raven/raven": "0.3.*"
+            },
+            "suggest": {
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Monolog": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/1.3.0"
+            },
+            "time": "2013-01-07T20:26:46+00:00"
+        },
+        {
+            "name": "pipa/base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roeltz/pipa-base.git",
+                "reference": "bc3acae7693a191a3afdb8dcee7b8e96ae12bfac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roeltz/pipa-base/zipball/bc3acae7693a191a3afdb8dcee7b8e96ae12bfac",
+                "reference": "bc3acae7693a191a3afdb8dcee7b8e96ae12bfac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Pipa/Functions/all.php",
+                    "bootstrap.php",
+                    "src/Pipa/Locale/defaults.php",
+                    "src/Pipa/Locale/underscore.php"
+                ],
+                "psr-0": {
+                    "Pipa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leonardo Rothe Tagliafico",
+                    "email": "leo_rothe@msn.com",
+                    "homepage": "http://leorothe.com/"
+                }
+            ],
+            "description": "Base package for the Pipa Framework",
+            "support": {
+                "issues": "https://github.com/roeltz/pipa-base/issues",
+                "source": "https://github.com/roeltz/pipa-base/tree/master"
+            },
+            "time": "2022-11-09T23:02:27+00:00"
+        },
+        {
+            "name": "pipa/data",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roeltz/pipa-data.git",
+                "reference": "a1c89f24548983b1dc43dc31f1e87a872fb413b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roeltz/pipa-data/zipball/a1c89f24548983b1dc43dc31f1e87a872fb413b1",
+                "reference": "a1c89f24548983b1dc43dc31f1e87a872fb413b1",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "1.3",
+                "php": ">=5.3.0",
+                "pipa/base": "*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pipa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leonardo Rothe Tagliafico",
+                    "email": "leo_rothe@msn.com",
+                    "homepage": "http://leorothe.com/"
+                }
+            ],
+            "description": "Data access package for the Pipa Framework",
+            "support": {
+                "issues": "https://github.com/roeltz/pipa-data/issues",
+                "source": "https://github.com/roeltz/pipa-data/tree/master"
+            },
+            "time": "2022-05-16T13:03:06+00:00"
+        },
+        {
+            "name": "pipa/data-mysql",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roeltz/pipa-data-mysql.git",
+                "reference": "0b634ba6c5ae88e8916fdfd3766e2db5e3af0af1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roeltz/pipa-data-mysql/zipball/0b634ba6c5ae88e8916fdfd3766e2db5e3af0af1",
+                "reference": "0b634ba6c5ae88e8916fdfd3766e2db5e3af0af1",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "1.3",
+                "php": ">=5.3.0",
+                "pipa/base": "*",
+                "pipa/data": "*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pipa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leonardo Rothe Tagliafico",
+                    "email": "leo_rothe@msn.com",
+                    "homepage": "http://leorothe.com/"
+                }
+            ],
+            "description": "MySQL driver package for the Pipa Framework",
+            "support": {
+                "issues": "https://github.com/roeltz/pipa-data-mysql/issues",
+                "source": "https://github.com/roeltz/pipa-data-mysql/tree/master"
+            },
+            "time": "2021-01-19T05:45:53+00:00"
+        },
+        {
+            "name": "pipa/http",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roeltz/pipa-http.git",
+                "reference": "bc15f6d680a595cfcf1bff6261596968b69c6393"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roeltz/pipa-http/zipball/bc15f6d680a595cfcf1bff6261596968b69c6393",
+                "reference": "bc15f6d680a595cfcf1bff6261596968b69c6393",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "pipa/base": "*"
+            },
+            "suggest": {
+                "pipa/pdf": "Provides well integrated PDF view support"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Pipa/HTTP/defaults.php"
+                ],
+                "psr-0": {
+                    "Pipa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leonardo Rothe Tagliafico",
+                    "email": "leo_rothe@msn.com",
+                    "homepage": "http://leorothe.com/"
+                }
+            ],
+            "description": "HTTP package for the Pipa Framework",
+            "support": {
+                "issues": "https://github.com/roeltz/pipa-http/issues",
+                "source": "https://github.com/roeltz/pipa-http/tree/master"
+            },
+            "time": "2021-07-14T01:13:49+00:00"
+        },
+        {
+            "name": "pipa/orm",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roeltz/pipa-orm.git",
+                "reference": "b769739d48d6fdbda37fa080d2b78ff500ebc8be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roeltz/pipa-orm/zipball/b769739d48d6fdbda37fa080d2b78ff500ebc8be",
+                "reference": "b769739d48d6fdbda37fa080d2b78ff500ebc8be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "pipa/data": "*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Pipa/ORM/defaults.php"
+                ],
+                "psr-0": {
+                    "Pipa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leonardo Rothe Tagliafico",
+                    "email": "leo_rothe@msn.com",
+                    "homepage": "http://leorothe.com/"
+                }
+            ],
+            "description": "ORM Package for the Pipa Framework",
+            "support": {
+                "issues": "https://github.com/roeltz/pipa-orm/issues",
+                "source": "https://github.com/roeltz/pipa-orm/tree/master"
+            },
+            "time": "2023-01-16T23:52:44+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
